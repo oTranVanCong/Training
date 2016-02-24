@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # You can have the root of your site routed with "root"
+  root 'api/projects#index'
+
   # More reference for routes http://guides.rubyonrails.org/routing.html
   namespace :api do
     resources :projects, except: [:new, :edit] do
