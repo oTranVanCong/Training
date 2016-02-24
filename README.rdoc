@@ -1,28 +1,22 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository for training Ruby on rails. I have built simple Restful API for simple Todo app
 
-Things you may want to cover:
+* Routes URL of this app following:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```
+           Prefix Verb   URI Pattern                                   Controller#Action
+             root GET    /                                             api/projects#index
+api_project_tasks GET    /api/projects/:project_id/tasks(.:format)     api/tasks#index
+                  POST   /api/projects/:project_id/tasks(.:format)     api/tasks#create
+ api_project_task GET    /api/projects/:project_id/tasks/:id(.:format) api/tasks#show
+                  PATCH  /api/projects/:project_id/tasks/:id(.:format) api/tasks#update
+                  PUT    /api/projects/:project_id/tasks/:id(.:format) api/tasks#update
+                  DELETE /api/projects/:project_id/tasks/:id(.:format) api/tasks#destroy
+     api_projects GET    /api/projects(.:format)                       api/projects#index
+                  POST   /api/projects(.:format)                       api/projects#create
+      api_project GET    /api/projects/:id(.:format)                   api/projects#show
+                  PATCH  /api/projects/:id(.:format)                   api/projects#update
+                  PUT    /api/projects/:id(.:format)                   api/projects#update
+                  DELETE /api/projects/:id(.:format)                   api/projects#destroy
+```
