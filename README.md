@@ -2,6 +2,17 @@
 This repository for training Ruby on rails. I have built simple Restful API for simple Todo app
 
 * You can access this API on https://todo-congtv.herokuapp.com
+
+* How to run this app on localhost
+  * Install environments
+    * Ruby
+    * Rails
+    * Postgres server
+  * Download source code from this repository and go in the source code directory run following:
+    * rake db:create
+    * rake db:migrate
+    * rails s
+
 * Routes URL of this app following:
 
 ```
